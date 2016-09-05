@@ -1,0 +1,8 @@
+.vs/
+**/obj
+**/bin
+**/packages
+*.userprefs
+
+# Private configs
+Config/*
