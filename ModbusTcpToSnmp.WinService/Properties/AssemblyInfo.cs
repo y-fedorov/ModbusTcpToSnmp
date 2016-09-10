@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SnmpToModbus.WinService")]
+[assembly: AssemblyTitle("ModbusTcpToSnmp.WinService")]
 [assembly: AssemblyDescription("Part of the ModbusToSnmp distribution. Windows Service receives SNMP Agent requests and converts them into ModbusTCP requests. Also supports configuration and addressing options.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://github.com/y-fedorov")]

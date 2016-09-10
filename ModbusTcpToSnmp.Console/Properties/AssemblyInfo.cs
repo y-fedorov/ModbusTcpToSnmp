@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 
 [assembly: AssemblyProduct("ModbusTcpToSnmp")]
-[assembly: AssemblyDescription("Part of the ModbusToSnmp distribution. Console applicetion that receives SNMP Agent requests and converts them into ModbusTCP requests. Also supports configuration and addressing options.")]
+[assembly: AssemblyDescription("Part of the ModbusToSnmp distribution. Console application that receives SNMP Agent requests and converts them into ModbusTCP requests. Also supports configuration and addressing options.")]
 
 [assembly: AssemblyCompany("https://github.com/y-fedorov")]
 [assembly: AssemblyCopyright("Licensed under the MIT License (MIT).")]

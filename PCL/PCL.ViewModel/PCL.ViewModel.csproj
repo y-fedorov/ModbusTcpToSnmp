@@ -69,12 +69,12 @@
       <HintPath>..\..\packages\NModbus4.2.1.0\lib\net40\NModbus4.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SharpSnmpLib.Full, Version=9.0.20212.1, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Lextm.SharpSnmpLib.9.0.0\lib\net45\SharpSnmpLib.Full.dll</HintPath>
+    <Reference Include="SharpSnmpLib.Full, Version=9.0.20328.9, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Lextm.SharpSnmpLib.9.0.1\lib\net45\SharpSnmpLib.Full.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SharpSnmpLib.Portable, Version=9.0.20212.1, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Lextm.SharpSnmpLib.9.0.0\lib\net45\SharpSnmpLib.Portable.dll</HintPath>
+    <Reference Include="SharpSnmpLib.Portable, Version=9.0.20328.9, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Lextm.SharpSnmpLib.9.0.1\lib\net45\SharpSnmpLib.Portable.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
