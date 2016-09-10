@@ -1,9 +1,9 @@
 ﻿using log4net.Config;
-using PCL.Interfaces.Logging;
+using ModbusTcpToSnmp.PCL.Interfaces.Logging;
 using System;
 using System.IO;
 
-namespace PCL.ViewModel.Logging
+namespace ModbusTcpToSnmp.PCL.ViewModel.Logging
 {
     public class Log4NetLogger : ILogger
     {

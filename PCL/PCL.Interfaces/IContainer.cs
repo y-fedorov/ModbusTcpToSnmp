@@ -1,7 +1,7 @@
 
 using System;
 
-namespace PCL.Interfaces.IoC
+namespace ModbusTcpToSnmp.PCL.Interfaces.IoC
 {
     public interface IParameterOverride
     {

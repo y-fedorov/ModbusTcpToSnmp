@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyTitle ("PCL.Interfaces")]
+[assembly: AssemblyTitle("ModbusTcpToSnmp.PCL.Interfaces")]
 
 
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ModbusTcpToSnmp PCL Interfaces class library")]
 [assembly: AssemblyConfiguration("")]
 
 [assembly: AssemblyCompany("https://github.com/y-fedorov")]

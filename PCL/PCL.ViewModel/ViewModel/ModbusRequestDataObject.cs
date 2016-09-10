@@ -1,15 +1,11 @@
 ﻿using Lextm.SharpSnmpLib;
 using Lextm.SharpSnmpLib.Pipeline;
-using PCL.DataModel;
-using PCL.ViewModel.Logging;
+using ModbusTcpToSnmp.PCL.DataModel;
+using ModbusTcpToSnmp.PCL.ViewModel.Logging;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ModbusTcpToSnmp
+namespace ModbusTcpToSnmp.PCL.ViewModel
 {
     public sealed class ModbusRequestDataObject : ScalarObject
     {

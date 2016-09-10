@@ -2,13 +2,12 @@
 using Modbus.Device;
 using System.Net.Sockets;
 using Modbus.Utility;
-using System.Threading.Tasks;
 using System.Threading;
-using PCL.ViewModel.Logging;
 using System.Net;
-using PCL.ViewModel.ViewModel.Exceptions;
+using ModbusTcpToSnmp.PCL.ViewModel.Logging;
+using ModbusTcpToSnmp.PCL.ViewModel.Exceptions;
 
-namespace ModbusTcpToSnmp
+namespace ModbusTcpToSnmp.PCL.ViewModel
 {
     public class ModbusConnection
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using Newtonsoft.Json;
-using PCL.DataModel;
 using System.Collections.Generic;
+using ModbusTcpToSnmp.PCL.DataModel;
 
-namespace PCL.ViewModel
+namespace ModbusTcpToSnmp.PCL.ViewModel
 {
     public interface IApplicationSettings
     {

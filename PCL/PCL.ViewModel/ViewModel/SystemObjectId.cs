@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModbusTcpToSnmp
+namespace ModbusTcpToSnmp.PCL.ViewModel
 {
     public sealed class SystemObjectId : ScalarObject
     {

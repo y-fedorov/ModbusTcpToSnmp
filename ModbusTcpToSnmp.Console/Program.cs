@@ -1,6 +1,5 @@
-
-using PCL.ViewModel;
-using PCL.ViewModel.IoC;
+using ModbusTcpToSnmp.PCL.ViewModel;
+using ModbusTcpToSnmp.PCL.ViewModel.IoC;
 
 namespace ModbusTcpToSnmp
 {
@@ -11,7 +10,7 @@ namespace ModbusTcpToSnmp
             var bootStrap = new Bootstrap();
             bootStrap.Initialize();
 
-            ServiceLocator.Default.Resolve<SnmpToModbusViewModel>().Start();
+            ServiceLocator.Default.Resolve<ModbusTcpToSnmpViewModel>().Start();
         }
     }
 }

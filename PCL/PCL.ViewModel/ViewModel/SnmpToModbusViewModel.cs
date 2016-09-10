@@ -1,23 +1,18 @@
 ﻿using Lextm.SharpSnmpLib;
-using PCL.ViewModel.IoC;
-using PCL.ViewModel.Logging;
-using ModbusTcpToSnmp;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using ModbusTcpToSnmp.PCL.ViewModel.IoC;
+using ModbusTcpToSnmp.PCL.ViewModel.Logging;
 
-namespace PCL.ViewModel
+namespace ModbusTcpToSnmp.PCL.ViewModel
 {
-    public class SnmpToModbusViewModel
+    public class ModbusTcpToSnmpViewModel
     {
         private SnmpServer snmpServer;
         private bool initialized = false;
         IApplicationSettings appSettings;
 
-        public SnmpToModbusViewModel(IApplicationSettings appSettings)
+        public ModbusTcpToSnmpViewModel(IApplicationSettings appSettings)
         {
             this.appSettings = appSettings;
         }

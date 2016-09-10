@@ -1,7 +1,6 @@
 using System;
-using System.Collections.Generic;
 
-namespace PCL.DataModel
+namespace ModbusTcpToSnmp.PCL.DataModel
 {
     [Serializable]
     public enum ModbusValueType

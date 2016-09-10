@@ -1,5 +1,5 @@
-﻿using PCL.ViewModel;
-using PCL.ViewModel.IoC;
+﻿using ModbusTcpToSnmp.PCL.ViewModel;
+using ModbusTcpToSnmp.PCL.ViewModel.IoC;
 using System.Diagnostics;
 using System.ServiceProcess;
 
@@ -8,7 +8,7 @@ namespace ModbusTcpToSnmp.WinService
     public partial class ModbusTcpToSnmpService : ServiceBase
     {
         private EventLog eventLog;
-        private SnmpToModbusViewModel viewModel;
+        private ModbusTcpToSnmpViewModel viewModel;
 
         public readonly string EventLogIdentifier = "ModbusTcpToSnmp.WinService";
 
@@ -27,7 +27,7 @@ namespace ModbusTcpToSnmp.WinService
             var bootStrap = new Bootstrap();
             bootStrap.Initialize();
 
-            this.viewModel = ServiceLocator.Default.Resolve<SnmpToModbusViewModel>();
+            this.viewModel = ServiceLocator.Default.Resolve<ModbusTcpToSnmpViewModel>();
         }
 
         protected override void OnStart(string[] args)

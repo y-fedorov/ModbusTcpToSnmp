@@ -1,6 +1,6 @@
-﻿using PCL.ViewModel;
-using PCL.Interfaces.IoC;
-using PCL.ViewModel.IoC;
+﻿using ModbusTcpToSnmp.PCL.Interfaces.IoC;
+using ModbusTcpToSnmp.PCL.ViewModel;
+using ModbusTcpToSnmp.PCL.ViewModel.IoC;
 
 namespace JsonConfigToMib
 {

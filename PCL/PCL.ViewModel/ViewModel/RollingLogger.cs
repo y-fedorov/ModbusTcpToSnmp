@@ -6,7 +6,7 @@ using Lextm.SharpSnmpLib.Messaging;
 using Lextm.SharpSnmpLib.Pipeline;
 using Lextm.SharpSnmpLib;
 
-namespace ModbusTcpToSnmp.Logging
+namespace ModbusTcpToSnmp.PCL.ViewModel.Logging
 {
     public class RollingLogger : ILogger
     {

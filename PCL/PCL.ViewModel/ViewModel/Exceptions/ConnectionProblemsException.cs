@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCL.ViewModel.ViewModel.Exceptions
+namespace ModbusTcpToSnmp.PCL.ViewModel.Exceptions
 {
     public class ConnectionProblemsException : Exception
     {

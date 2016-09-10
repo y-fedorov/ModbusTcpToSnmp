@@ -1,11 +1,10 @@
 ﻿using Microsoft.Practices.Unity;
-using PCL.Interfaces.IoC;
-using PCL.Interfaces.Logging;
-using PCL.ViewModel.Logging;
+using ModbusTcpToSnmp.PCL.Interfaces.IoC;
+using ModbusTcpToSnmp.PCL.ViewModel.Logging;
 using System;
 using System.Linq;
 
-namespace PCL.ViewModel.IoC
+namespace ModbusTcpToSnmp.PCL.ViewModel.IoC
 {
     public class ServiceLocator : IContainer, IDisposable
     {

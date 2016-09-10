@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyTitle ("Indy.PCL.ViewModel")]
+[assembly: AssemblyTitle("ModbusTcpToSnmp.PCL.ViewModel")]
 
 
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ModbusTcpToSnmp PCL ViewModel class library")]
 [assembly: AssemblyConfiguration("")]
 
 [assembly: AssemblyCompany("https://github.com/y-fedorov")]

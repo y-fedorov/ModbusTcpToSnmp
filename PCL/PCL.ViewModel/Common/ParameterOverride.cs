@@ -1,6 +1,6 @@
-﻿using PCL.Interfaces.IoC;
+﻿using ModbusTcpToSnmp.PCL.Interfaces.IoC;
 
-namespace PCL.ViewModel.IoC
+namespace ModbusTcpToSnmp.PCL.ViewModel.IoC
 {
     public class ParameterOverride : IParameterOverride
     {

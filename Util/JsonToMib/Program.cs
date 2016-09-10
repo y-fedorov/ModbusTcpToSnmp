@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ModbusTcpToSnmp.PCL.ViewModel;
+using ModbusTcpToSnmp.PCL.ViewModel.IoC;
+using System;
 using System.IO;
-using PCL.ViewModel;
-using PCL.ViewModel.IoC;
+
 
 namespace JsonConfigToMib
 {

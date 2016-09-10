@@ -5,13 +5,10 @@ using Lextm.SharpSnmpLib.Pipeline;
 using Lextm.SharpSnmpLib.Security;
 using System;
 using System.Net;
-using PCL.DataModel;
-using System.Collections;
-using PCL.ViewModel.IoC;
-using PCL.ViewModel.Logging;
-using ModbusTcpToSnmp.Logging;
+using ModbusTcpToSnmp.PCL.ViewModel.IoC;
+using ModbusTcpToSnmp.PCL.ViewModel.Logging;
 
-namespace ModbusTcpToSnmp
+namespace ModbusTcpToSnmp.PCL.ViewModel
 {
     public class SnmpServer : IDisposable
     {

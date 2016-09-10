@@ -1,8 +1,8 @@
 ﻿using System;
-using PCL.Interfaces.Logging;
-using PCL.ViewModel.IoC;
+using ModbusTcpToSnmp.PCL.ViewModel.IoC;
+using ModbusTcpToSnmp.PCL.Interfaces.Logging;
 
-namespace PCL.ViewModel.Logging
+namespace ModbusTcpToSnmp.PCL.ViewModel.Logging
 {
     public static class Logger
     {

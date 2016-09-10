@@ -2,7 +2,7 @@
 Mediator between [Modbus TCP](https://en.wikipedia.org/wiki/Modbus) and [SNMP](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol) agent that allows you to configure the system to generate [MIB](https://en.wikipedia.org/wiki/Management_information_base) files and query the data from the Modbus TCP protocol and give via SNMP server.
 
 ### Dependencies
-  - [Microsoft Visual Studio 2015 Installer Projects](https://visualstudiogallery.msdn.microsoft.com/f1cc3f3e-c300-40a7-8797-c509fb8933b9)
+- [Microsoft Visual Studio 2015 Installer Projects](https://visualstudiogallery.msdn.microsoft.com/f1cc3f3e-c300-40a7-8797-c509fb8933b9)
 - Nuget packages
     -  [NModbus](https://github.com/NModbus4/NModbus4) 4.2.1.0 - [The MIT License](https://github.com/NModbus4/NModbus4/blob/portable-3.0/LICENSE.txt)
     -  [Lextm.SharpSnmpLib](https://sharpsnmplib.codeplex.com/) 9.0.1 - [The MIT License](https://sharpsnmplib.codeplex.com/license)

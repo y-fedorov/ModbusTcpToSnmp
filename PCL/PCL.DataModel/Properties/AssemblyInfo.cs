@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyTitle ("Indy.PCL.Model.Entities")]
+[assembly: AssemblyTitle("ModbusTcpToSnmp.PCL.DataModel")]
 
 
-[assembly: AssemblyDescription ("")]
+[assembly: AssemblyDescription("ModbusTcpToSnmp PCL data model class library")]
 [assembly: AssemblyConfiguration ("")]
 
 [assembly: AssemblyCompany("https://github.com/y-fedorov")]

@@ -1,9 +1,8 @@
-﻿using PCL.ViewModel;
-using PCL.Interfaces.IoC;
-using System.Threading.Tasks;
-using PCL.Interfaces.Logging;
-using PCL.ViewModel.Logging;
-using PCL.ViewModel.IoC;
+﻿using ModbusTcpToSnmp.PCL.Interfaces.IoC;
+using ModbusTcpToSnmp.PCL.Interfaces.Logging;
+using ModbusTcpToSnmp.PCL.ViewModel;
+using ModbusTcpToSnmp.PCL.ViewModel.IoC;
+using ModbusTcpToSnmp.PCL.ViewModel.Logging;
 
 namespace ModbusTcpToSnmp
 {
@@ -18,7 +17,7 @@ namespace ModbusTcpToSnmp
             Log4NetLogger.Init();
 
             container.RegisterInstance(new Log4NetLogger("General"));
-            container.RegisterInstance(new Logging.RollingLogger());
+            container.RegisterInstance(new RollingLogger());
             container.RegisterInstance<ILogger>(Logger.Current);
 
             container.RegisterInstance<IApplicationSettings>(new ApplicationSettings());

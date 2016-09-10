@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModbusTcpToSnmp
+namespace ModbusTcpToSnmp.PCL.ViewModel
 {
     public class ModbusConnectionArgs
     {
