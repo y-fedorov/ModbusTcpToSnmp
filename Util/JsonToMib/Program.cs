@@ -1,26 +1,22 @@
 ﻿using System;
-using Newtonsoft.Json;
 using System.IO;
-using System.Collections.Generic;
 using PCL.ViewModel;
-using System.Threading.Tasks;
 using PCL.ViewModel.IoC;
 
-namespace JsonToMib
+namespace JsonConfigToMib
 {
-
-	class MainClass
+    class MainClass
 	{
         public static void Main(string[] args)
         {
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
 
             var bootStrap = new Bootstrap();
-            Task.Run(() => bootStrap.InitializeAsync()).Wait();
+            bootStrap.Initialize();
 
             var appSettings = ServiceLocator.Default.Resolve<IApplicationSettings>();
 
-
+            var productName = "<product-name>";
 
             var header = string.Format("{0}-mib DEFINITIONS ::= BEGIN\n\n" +
                         "IMPORTS\n" +
@@ -29,12 +25,12 @@ namespace JsonToMib
                         "--\n" +
                         "-- Node definitions\n" +
                         "--",
-                        "techmeh"); //TODO
+                        "<product>"); //TODO
 
 
             var objIdentifierFormat = "{0} OBJECT IDENTIFIER ::= {{ {1} {2} }}";
 
-            var fileName = string.Format("techmeh-v{0}.mib", appSettings.ConfigVersion);
+            var fileName = string.Format("{0}-v{1}.mib", productName, appSettings.ConfigVersion);
 
             using (StreamWriter file = new StreamWriter(fileName))
             {
@@ -67,11 +63,6 @@ namespace JsonToMib
                 }
                 file.WriteLine("END");
             }
-
-
-            Console.WriteLine("Config version: {0}", appSettings.ConfigVersion);
-
-            Console.WriteLine("Done!");
         }
 	}
 }

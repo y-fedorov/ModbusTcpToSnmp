@@ -5,9 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{4D393AD4-9DF8-4864-8B92-A64D46DA038C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>JsonToMib</RootNamespace>
-    <AssemblyName>JsonToMib</AssemblyName>
+    <RootNamespace>JsonConfigToMib</RootNamespace>
+    <AssemblyName>JsonConfigToMib</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -20,7 +21,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -45,7 +45,7 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>JsonToMib.MainClass</StartupObject>
+    <StartupObject>JsonConfigToMib.MainClass</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>

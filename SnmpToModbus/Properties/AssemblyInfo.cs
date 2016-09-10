@@ -7,17 +7,17 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-[assembly: AssemblyTitle("SnmpToModbus.Console")]
+[assembly: AssemblyTitle("ModbusTcpToSnmp.Console")]
 
 
-[assembly: AssemblyProduct("SnmpToModbusTCP")]
-[assembly: AssemblyDescription("SNMP agent application, that transform SNMP data requests to Modbus TCP ones")]
+[assembly: AssemblyProduct("ModbusTcpToSnmp")]
+[assembly: AssemblyDescription("Part of the ModbusToSnmp distribution. Console applicetion that receives SNMP Agent requests and converts them into ModbusTCP requests. Also supports configuration and addressing options.")]
 
-[assembly: AssemblyCompany("INDY-WORLD.NET")]
-[assembly: AssemblyCopyright("Copyright © 2016 Yaroslav Fedorov")]
+[assembly: AssemblyCompany("https://github.com/y-fedorov")]
+[assembly: AssemblyCopyright("Licensed under the MIT License (MIT).")]
 
 
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Yaroslav Fedorov")]
 [assembly: AssemblyCulture("")]
 
 #if DEBUG
@@ -31,7 +31,9 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 [assembly: CLSCompliant(true)]
-[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: NeutralResourcesLanguage("")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
 /*
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 */

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SnmpToModbus.WinService
+namespace ModbusTcpToSnmp.WinService
 {
     static class Program
     {
@@ -20,7 +16,7 @@ namespace SnmpToModbus.WinService
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new SnmpToModbusService()
+                new ModbusTcpToSnmpService()
             };
             ServiceBase.Run(ServicesToRun);
         }

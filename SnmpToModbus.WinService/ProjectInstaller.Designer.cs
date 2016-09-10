@@ -1,4 +1,4 @@
-﻿namespace SnmpToModbus.WinService
+﻿namespace ModbusTcpToSnmp.WinService
 {
     partial class ProjectInstaller
     {

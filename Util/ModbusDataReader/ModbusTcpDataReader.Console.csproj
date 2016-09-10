@@ -6,8 +6,8 @@
     <ProjectGuid>{72FA8AB6-CE77-4578-8202-0DD32264783E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MySample</RootNamespace>
-    <AssemblyName>MySample</AssemblyName>
+    <RootNamespace>ModbusTcpDataReader</RootNamespace>
+    <AssemblyName>ModbusTcpDataReader</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -37,6 +37,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <Commandlineparameters>--ip 127.0.0.1</Commandlineparameters>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ModbusTcpDataReader.MainClass</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,7 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Driver.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

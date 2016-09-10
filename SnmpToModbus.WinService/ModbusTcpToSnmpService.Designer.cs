@@ -1,6 +1,6 @@
-﻿namespace SnmpToModbus.WinService
+﻿namespace ModbusTcpToSnmp.WinService
 {
-    partial class SnmpToModbusService
+    partial class ModbusTcpToSnmpService
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "SnmpToModbusService";
+            this.ServiceName = "ModbusTcpToSnmpService";
         }
 
         #endregion

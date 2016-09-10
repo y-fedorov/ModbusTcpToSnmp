@@ -9,9 +9,9 @@ using PCL.DataModel;
 using System.Collections;
 using PCL.ViewModel.IoC;
 using PCL.ViewModel.Logging;
-using SnmpToModbus.Logging;
+using ModbusTcpToSnmp.Logging;
 
-namespace SnmpToModbus
+namespace ModbusTcpToSnmp
 {
     public class SnmpServer : IDisposable
     {

@@ -7,12 +7,12 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 
-[assembly: AssemblyCompany("INDY-WORLD.NET")]
-[assembly: AssemblyProduct("SnmpToModbusTCP")]
-[assembly: AssemblyCopyright("Copyright © 2016 Yaroslav Fedorov")]
+[assembly: AssemblyCompany("https://github.com/y-fedorov")]
+[assembly: AssemblyProduct("ModbusTcpToSnmp")]
+[assembly: AssemblyCopyright("Licensed under the MIT License (MIT).")]
 
 
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Yaroslav Fedorov")]
 [assembly: AssemblyCulture("")]
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".

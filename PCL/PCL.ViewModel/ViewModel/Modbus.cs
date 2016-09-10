@@ -8,7 +8,7 @@ using PCL.ViewModel.Logging;
 using System.Net;
 using PCL.ViewModel.ViewModel.Exceptions;
 
-namespace SnmpToModbus
+namespace ModbusTcpToSnmp
 {
     public class ModbusConnection
     {

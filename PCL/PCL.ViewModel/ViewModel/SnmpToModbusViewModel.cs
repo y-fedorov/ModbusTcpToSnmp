@@ -1,7 +1,7 @@
 ﻿using Lextm.SharpSnmpLib;
 using PCL.ViewModel.IoC;
 using PCL.ViewModel.Logging;
-using SnmpToModbus;
+using ModbusTcpToSnmp;
 using System;
 using System.Collections.Generic;
 using System.Linq;

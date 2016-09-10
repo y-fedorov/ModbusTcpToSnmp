@@ -4,12 +4,9 @@ using Modbus.Device;
 using Modbus.Utility;
 using log4net.Config;
 
-namespace MySample
+namespace ModbusTcpDataReader
 {
-    /// <summary>
-    ///     Demonstration of NModbus
-    /// </summary>
-    public class Driver
+    public class MainClass
     {
         public class ModbusConnectionArgs
         {
@@ -37,7 +34,6 @@ namespace MySample
             if (args.Length == 0)
             {
                 Console.WriteLine(cmdString);
-                Console.ReadKey();
                 return;
             }
 
@@ -101,15 +97,13 @@ namespace MySample
             {
                 Console.WriteLine(e.Message);
             }
-
-            Console.ReadKey();
         }
 
         public static void ModbusTcpMasterReadInputs(ModbusConnectionArgs args)
         {
-            using (TcpClient client = new TcpClient(args.IpAddress, args.Port))
+            using (var client = new TcpClient(args.IpAddress, args.Port))
             {
-                ModbusIpMaster master = ModbusIpMaster.CreateIp(client);
+                var master = ModbusIpMaster.CreateIp(client);
 
                 byte slaveId = Convert.ToByte(args.SlaveId);
                 ushort startAddress = Convert.ToUInt16(args.StartAddress);

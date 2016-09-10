@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SnmpToModbus.WinService")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Part of the ModbusToSnmp distribution. Windows Service receives SNMP Agent requests and converts them into ModbusTCP requests. Also supports configuration and addressing options.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SnmpToModbus.WinService")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("https://github.com/y-fedorov")]
+[assembly: AssemblyProduct("ModbusTcpToSnmp")]
+[assembly: AssemblyCopyright("Licensed under the MIT License (MIT).")]
+[assembly: AssemblyTrademark("Yaroslav Fedorov")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

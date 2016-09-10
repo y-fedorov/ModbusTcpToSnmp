@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnmpToModbus
+namespace ModbusTcpToSnmp
 {
     public sealed class ModbusRequestDataObject : ScalarObject
     {
