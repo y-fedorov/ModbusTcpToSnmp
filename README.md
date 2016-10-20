@@ -1,6 +1,8 @@
 # ModbusTcpToSnmp
 Mediator between [Modbus TCP](https://en.wikipedia.org/wiki/Modbus) and [SNMP](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol) agent that allows you to configure the system to generate [MIB](https://en.wikipedia.org/wiki/Management_information_base) files and query the data from the Modbus TCP protocol and give via SNMP server.
 
+![ModbusTcpToSnmp Sequence Diagram #1](https://cdn.rawgit.com/y-fedorov/ModbusTcpToSnmp/feature/ModbusTcpToSnmpRebranding/Doc/modbusTcpToSnmpSequence.svg)
+
 ### Dependencies
 - [Microsoft Visual Studio 2015 Installer Projects](https://visualstudiogallery.msdn.microsoft.com/f1cc3f3e-c300-40a7-8797-c509fb8933b9)
 - Nuget packages
