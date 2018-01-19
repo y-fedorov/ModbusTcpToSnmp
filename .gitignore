@@ -6,4 +6,4 @@
 
 # Private configs
 Config/*
-.csproj.user
+*.csproj.user
