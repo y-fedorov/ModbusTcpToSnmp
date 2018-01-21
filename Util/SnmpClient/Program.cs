@@ -112,7 +112,7 @@ namespace SnmpClient
                         return value.ToString();
                     } else
                     {
-                        throw new Exception("unsuported type");
+                        throw new Exception("unsuported variable type");
                     }
                 }
             }
