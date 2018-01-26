@@ -26,7 +26,6 @@ namespace SnmpToModbus
         private Object thisLock = new Object();
         private int bitId;
 
-        private Func<int, Integer32> func { get; set; }
         private ModbusConnection conn { get; set; }
         private int index { get; set; }
         private ModbusDataType mdt { get; set; }

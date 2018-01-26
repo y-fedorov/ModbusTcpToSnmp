@@ -87,11 +87,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="..\..\Config\modbus-snmp-orig.json">
-      <Link>Resources\modbus-snmp-orig.json</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
+    <Content Include="Resources\modbus-snmp-orig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PCL\PCL.DataModel\PCL.DataModel.csproj">

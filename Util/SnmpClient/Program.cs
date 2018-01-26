@@ -1,17 +1,16 @@
-﻿using JsonToMib;
+﻿using CommandLine;
+
 using Lextm.SharpSnmpLib;
 using Lextm.SharpSnmpLib.Messaging;
-using Lextm.SharpSnmpLib.Security;
+using PCL.DataModel;
 using PCL.ViewModel;
-using PCL.ViewModel.IoC;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace SnmpClient
 {
@@ -56,36 +55,78 @@ namespace SnmpClient
 
     class Program
     {
+        static void HandleParseError(IEnumerable<Error> errs)
+        {
+            throw new Exception("Parse argumnet exception");
+        }
+
         static void Main(string[] args)
         {
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
 
-            var bootStrap = new Bootstrap();
-            Task.Run(() => bootStrap.InitializeAsync()).Wait();
+            var parsedOptions = Parser.Default.ParseArguments<Options>(args).WithNotParsed<Options>((errs) => HandleParseError(errs));
+            var options = (parsedOptions as Parsed<Options>).Value;
 
-            var appSettings = ServiceLocator.Default.Resolve<IApplicationSettings>();
+            var appSettings = new ApplicationSettings(options.ConfigFile);
 
             int enpId = appSettings.SnmpServer.EnterpriceId;
-            int deviceNumber = 0;
 
-            var co = new ConnectionOptions("127.0.0.1", 161);
+            var co = new ConnectionOptions(options.IpAddress, options.Port);
 
-            foreach (var device in appSettings.Devices)
+            var availableDevices = appSettings.Devices;
+
+            Func< string, List <IModbusDevice>, string> enumerateDevices = (title, devices) => {
+                string output =  title + "\n";
+                devices.ForEach(d => output += string.Format("\t {0} - {1}\n", d.Name, d.DisplayName));
+                return output + "\n";
+            };
+
+            Console.WriteLine(enumerateDevices("Available devices:", availableDevices.ToList()));
+
+            if (options.DevicesFilter.Any())
             {
-                deviceNumber++;
-                foreach (var channel in device.Channels)
-                {
-                    string sum = channel.Summary;
-                   // string id = ".1.3.6.1.2.1.1.1.0";
-                    string id = ".1.3.6.1.2.1.2.1.0";
-                    //string id = string.Format("1.3.6.1.4.1.{0}.{1}.{2}.0", enpId, deviceNumber, channel.SnmpId);
-                    var value = Main2(co, new ObjectIdentifier(id));
-                    Console.WriteLine("{0} {1} : {2}", sum, id, value);
-                }
+                availableDevices = availableDevices.Where(d => options.DevicesFilter.Contains(d.Name));
+                Console.WriteLine(enumerateDevices("Selected devices:", availableDevices.ToList()));
+            }
+            if (!availableDevices.Any())
+            {
+                Console.WriteLine("no devices");
+                return;
             }
 
+            var timeout = 1000 * options.Timeout;
+            if (timeout < 1000)
+            {
+                timeout = 1000;
+            }
 
-            Console.WriteLine("");
+            while (true)
+            {
+
+                foreach (var device in availableDevices)
+                {
+                    var availableChannels = device.Channels;
+
+                    if (options.ChannelsFilter.Any())
+                    {
+                        availableChannels = availableChannels.Where(c => options.ChannelsFilter.Contains(c.Name));
+                    }
+
+                    foreach (var channel in availableChannels)
+                    {
+                        string sum = channel.Summary;
+                        string id = string.Format("1.3.6.1.4.1.{0}.{1}.{2}.0", enpId, device.DeviceId, channel.SnmpId);
+                        var value = Main2(co, new ObjectIdentifier(id));
+
+                        var floatValue = Int32.Parse(value) * options.Factor;
+                        Console.WriteLine("{0} : {1}", sum, floatValue);
+
+                        
+                        Thread.Sleep(timeout);
+                    }
+                }
+                
+            }
         }
 
 
@@ -95,12 +136,11 @@ namespace SnmpClient
             try
             {
                 List<Variable> vList = new List<Variable> { new Variable(oid) };
-                VersionCode version = VersionCode.V1;
+                VersionCode version = VersionCode.V2;
                 var communityName = new OctetString(co.CommunityName);
 
                 foreach (Variable variable in Messenger.Get(version, endpoint, communityName, vList, co.SnmpServerTimeout))
                 {
-                    Console.WriteLine(variable);
                     if (variable.Data.TypeCode == SnmpType.OctetString)
                     {
                         return variable.Data.ToString();
