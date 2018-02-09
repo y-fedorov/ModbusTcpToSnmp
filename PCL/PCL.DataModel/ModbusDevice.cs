@@ -13,6 +13,7 @@ namespace ModbusTcpToSnmp.PCL.DataModel
         int SlaveId { get; }
         string Prefix { get; }
         IEnumerable<ModbusDeviceChannel> Channels { get; }
+        string DisplayName { get; }
     }
 
     [Serializable]
@@ -26,6 +27,8 @@ namespace ModbusTcpToSnmp.PCL.DataModel
 		public int SlaveId {get; set; }
         public string Prefix { get; set; }
         public IEnumerable<ModbusDeviceChannel> Channels { get; set; }
+
+        public string DisplayName { get; set; }
 
         public override string ToString()
         {

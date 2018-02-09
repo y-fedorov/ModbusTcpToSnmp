@@ -7,3 +7,4 @@
 # Private configs
 Config/*
 **/Debug/*
+*.csproj.user

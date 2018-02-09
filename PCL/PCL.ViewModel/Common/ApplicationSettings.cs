@@ -17,25 +17,31 @@ namespace ModbusTcpToSnmp.PCL.ViewModel
 
     public class ApplicationSettings : IApplicationSettings
     {
-		private string fileName = "Resources/modbus-snmp-orig.json";
+		private static readonly string fileName = "Resources/modbus-snmp-orig.json";
         private readonly SnmpToModbusConfig config;
 
-		public ApplicationSettings()
+        public ApplicationSettings(string configFile)
         {
             try
             {
-                using (var configStreamReader = new StreamReader(this.fileName))
+                using (var configStreamReader = new StreamReader(configFile))
                 {
                     var jsonTextReader = new JsonTextReader(configStreamReader);
                     var jsonSerializer = new JsonSerializer();
                     this.config = jsonSerializer.Deserialize<SnmpToModbusConfig>(jsonTextReader);
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
-                //TODO: log exception Logger.LogException(e);
+                Console.WriteLine(e);
                 throw;
             }
-		}
+        }
+
+		public ApplicationSettings() : this(fileName)
+        {
+
+        }
 
         public string AppVersion
         {
