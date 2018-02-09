@@ -1,0 +1,125 @@
+{
+	"version": "0.0.1",
+	"name": "Test Project",
+	"snmpServer":
+	{
+		"Port": 161,
+		"bindIp": "127.0.0.1",
+		"enterpriceId": 2606,
+		"community": "public",
+		"trapIP_1": "127.0.0.1",
+		"sysObjectId": "1.3.6.1.4.1.2606.3.2.11"
+	},
+	"devices":
+	[
+		{
+			"name": "modbus_device_1",
+			"displayName": "Device 1 - PLC-1 Pump control rack",
+			"model": "SN: 125DHV v.3.0",
+			"host": "192.168.1.130",
+			"port": "502",
+			"slaveId": 1,
+			"defaultPrecision": 2,
+			"channels":
+			[
+				{
+				  "type": "HoldingRegister",
+				  "name": "int16_demo_parameter_1",
+				  "summary": "Integer demo parameter 1",
+				  "size": "Int16",
+				  "position": 0,
+				  "snmpId": 1
+
+				},
+				{
+				  "type": "HoldingRegister",
+				  "name": "int16_demo_parameter_2",
+				  "summary": "Integer demo parameter 2",
+				  "size": "Int16",
+				  "position": 1,
+				  "snmpId": 2
+				},
+				{
+				  "type": "HoldingRegister",
+				  "name": "float_demo_parameter",
+				  "summary": "Float demo parameter",
+				  "size": "Float32",
+				  "position": 3,
+				  "snmpId": 3
+				},
+				{
+				  "type": "HoldingRegister",
+				  "name": "byte_demo_parameter_1",
+				  "summary": "Byte demo parameter 1 (bit 0)",
+				  "size": "Byte",
+				  "position": 20,
+				  "bitPos": 0,
+				  "snmpId": 4
+				},
+				{
+				  "type": "HoldingRegister",
+				  "name": "byte_demo_parameter_2",
+				  "summary": "Byte demo parameter 2 (bit 1)",
+				  "size": "Byte",
+				  "position": 20,
+				  "bitPos": 1,
+				  "snmpId": 5
+				}
+			]
+		},
+		{
+			"name" : "modbus_device_2",
+			"displayName": "Device 2 - PLC-2 Air Control",
+			"model": "Owen PLC 100 P.M",
+			"host": "192.168.1.131",
+			"port": "502",
+			"slaveId": 1,
+			"channels":
+			[
+				{
+				  "type": "HoldingRegister",
+				  "name": "int16_demo_parameter_1",
+				  "summary": "Integer demo parameter 1",
+				  "size": "Int16",
+				  "position": 0,
+				  "snmpId": 1
+
+				},
+				{
+				  "type": "HoldingRegister",
+				  "name": "int16_demo_parameter_2",
+				  "summary": "Integer demo parameter 2",
+				  "size": "Int16",
+				  "position": 1,
+				  "snmpId": 2
+				},
+				{
+				  "type": "HoldingRegister",
+				  "name": "float_demo_parameter",
+				  "summary": "Float demo parameter",
+				  "size": "Float32",
+				  "position": 3,
+				  "snmpId": 3
+				},
+				{
+				  "type": "HoldingRegister",
+				  "name": "byte_demo_parameter_1",
+				  "summary": "Byte demo parameter 1 (bit 0)",
+				  "size": "Byte",
+				  "position": 20,
+				  "bitPos": 0,
+				  "snmpId": 4
+				},
+				{
+				  "type": "HoldingRegister",
+				  "name": "byte_demo_parameter_2",
+				  "summary": "Byte demo parameter 2 (bit 1)",
+				  "size": "Byte",
+				  "position": 20,
+				  "bitPos": 1,
+				  "snmpId": 11
+				}
+			]
+		}
+	]
+}

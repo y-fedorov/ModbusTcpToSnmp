@@ -89,7 +89,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Resources\modbus-snmp-orig.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

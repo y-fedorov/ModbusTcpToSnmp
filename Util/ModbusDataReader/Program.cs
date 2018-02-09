@@ -1,8 +1,8 @@
-using System;
-using System.Net.Sockets;
+using log4net.Config;
 using Modbus.Device;
 using Modbus.Utility;
-using log4net.Config;
+using System;
+using System.Net.Sockets;
 
 namespace ModbusTcpDataReader
 {

@@ -2,8 +2,8 @@
 
 using Lextm.SharpSnmpLib;
 using Lextm.SharpSnmpLib.Messaging;
-using PCL.DataModel;
-using PCL.ViewModel;
+using ModbusTcpToSnmp.PCL.DataModel;
+using ModbusTcpToSnmp.PCL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
