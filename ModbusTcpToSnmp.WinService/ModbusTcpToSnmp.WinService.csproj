@@ -101,10 +101,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Config\modbus-snmp-orig.json">
+      <Link>Resources\modbus-snmp-orig.json</Link>
+    </None>
     <None Include="App.config" />
-    <Content Include="Resources\modbus-snmp-orig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ProjectInstaller.resx">

@@ -17,7 +17,7 @@ namespace JsonConfigToMib
 
             var appSettings = ServiceLocator.Default.Resolve<IApplicationSettings>();
 
-            var productName = "<product-name>";
+            var productName = appSettings.ProjectName;
 
             var header = string.Format("{0}-mib DEFINITIONS ::= BEGIN\n\n" +
                         "IMPORTS\n" +

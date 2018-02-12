@@ -16,6 +16,11 @@ namespace ModbusTcpToSnmp.PCL.DataModel
 			set;
 		}
 
+        public string ProjectName
+        {
+            get;
+            set;
+        }
 		public IEnumerable<ModbusDevice> Devices
 		{
 			get;

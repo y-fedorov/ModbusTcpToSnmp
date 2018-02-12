@@ -10,6 +10,7 @@ namespace ModbusTcpToSnmp.PCL.ViewModel
     {
         string ConfigVersion { get; }
         string AppVersion { get; }
+        string ProjectName { get; }
         ISnmpServerParams SnmpServer { get; }
         IEnumerable<IModbusDevice> Devices { get; }
     }
@@ -43,11 +44,19 @@ namespace ModbusTcpToSnmp.PCL.ViewModel
 
         }
 
+        public string ProjectName
+        {
+            get
+            {
+                return config.ProjectName;
+            }
+        }
+
         public string AppVersion
         {
             get
             {
-                return "0.0.0.1";
+                return config.Version;
             }
         }
         public string ConfigVersion

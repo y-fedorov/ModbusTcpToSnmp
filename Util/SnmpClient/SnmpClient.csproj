@@ -66,11 +66,11 @@
     <Content Include="Example.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="..\..\Config\modbus-snmp-orig.json">
+      <Link>Resources\modbus-snmp-orig.json</Link>
+    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <Content Include="Resources\modbus-snmp-orig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PCL\PCL.DataModel\PCL.DataModel.csproj">

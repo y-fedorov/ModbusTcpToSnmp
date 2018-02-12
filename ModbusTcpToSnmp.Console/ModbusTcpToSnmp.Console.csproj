@@ -109,11 +109,11 @@
     <Compile Include="Bootstrap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="..\Config\modbus-snmp-orig.json">
+      <Link>Resources\modbus-snmp-orig.json</Link>
+    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <Content Include="Resources\modbus-snmp-orig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Resource Include="Resources\network-server.ico" />
   </ItemGroup>
   <ItemGroup>
